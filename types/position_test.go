@@ -41,6 +41,7 @@ var _ = Describe("Position", func() {
 				]`)
 				err := json.Unmarshal(b, &p)
 				Expect(err).To(HaveOccurred())
+				Expect(p).To(Equal(Position{}))
 			})
 		})
 		Context("An array of only one int", func() {
@@ -51,6 +52,16 @@ var _ = Describe("Position", func() {
 				]`)
 				err := json.Unmarshal(b, &p)
 				Expect(err).To(HaveOccurred())
+				Expect(p).To(Equal(Position{}))
+			})
+		})
+		Context("Anything else", func() {
+			It("should return an error", func() {
+				var p Position
+				b := []byte(`null`)
+				err := json.Unmarshal(b, &p)
+				Expect(err).To(HaveOccurred())
+				Expect(p).To(Equal(Position{}))
 			})
 		})
 	})
