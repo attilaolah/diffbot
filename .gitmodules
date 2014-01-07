@@ -1,6 +1,6 @@
-[submodule "automatic/github.com/onsi/gomega"]
-	path = automatic/github.com/onsi/gomega
+[submodule "src/github.com/onsi/gomega"]
+	path = src/github.com/onsi/gomega
 	url = git@github.com:onsi/gomega
-[submodule "automatic/github.com/onsi/ginkgo"]
-	path = automatic/github.com/onsi/ginkgo
+[submodule "src/github.com/onsi/ginkgo"]
+	path = src/github.com/onsi/ginkgo
 	url = git@github.com:onsi/ginkgo
