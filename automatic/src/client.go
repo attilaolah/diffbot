@@ -7,3 +7,5 @@ import (
 type Client struct {
 	Client http.Client
 }
+
+var client Client
