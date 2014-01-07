@@ -28,9 +28,9 @@ var _ = Describe("Categories", func() {
 				err := json.Unmarshal(b, &c)
 				Expect(err).NotTo(HaveOccurred())
 				Expect(c).To(Equal(Categories{
-					0: "zero",
-					1: "one",
-					2: "two",
+					0:  "zero",
+					1:  "one",
+					2:  "two",
 					-8: "minus eight",
 				}))
 			})

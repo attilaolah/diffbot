@@ -25,4 +25,3 @@ func (c *Categories) UnmarshalJSON(b []byte) (err error) {
 	}
 	return
 }
-

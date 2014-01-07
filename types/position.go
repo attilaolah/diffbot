@@ -23,4 +23,3 @@ func (p *Position) UnmarshalJSON(b []byte) (err error) {
 	p.Y = a[1]
 	return
 }
-

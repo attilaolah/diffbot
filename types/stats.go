@@ -23,4 +23,3 @@ func (s *Stats) UnmarshalJSON(b []byte) (err error) {
 	}
 	return
 }
-
