@@ -17,6 +17,15 @@ func TestTime(t *testing.T) {
 
 var _ = Describe("Time", func() {
 	Describe("JSON-deserialising", func() {
+		Context("An RFC3339-encoded timestamp", func() {
+			It("should return a valid Time object", func() {
+				var t Time
+				b := []byte(`"2014-01-07T20:02:24Z"`)
+				err := json.Unmarshal(b, &t)
+				Expect(err).NotTo(HaveOccurred())
+				Expect(t.Time().Equal(time.Date(2014, time.January, 7, 20, 2, 24, 0, time.UTC))).To(BeTrue())
+			})
+		})
 		Context("An RFC1123-encoded timestamp", func() {
 			It("should return a valid Time object", func() {
 				var t Time
