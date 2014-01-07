@@ -5,7 +5,6 @@ import (
 )
 
 type Client struct {
+	APIKey string
 	Client http.Client
 }
-
-var client Client

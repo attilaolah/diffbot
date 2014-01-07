@@ -9,7 +9,7 @@ type Article struct {
 	ResolvedURL string          `json:"resolved_url"`
 	Icon        string          `json:"icon"`
 	Meta        json.RawMessage `json:"meta" diffbot:"optional"`
-	QueryString string          `json:"querystring" diffbot:"optional"`
+	QueryString json.RawMessage `json:"querystring" diffbot:"optional"`
 	Links       []string        `json:"links" diffbot:"optional"`
 	Type        string          `json:"type"`
 	Title       string          `json:"title"`

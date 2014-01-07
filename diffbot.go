@@ -7,6 +7,7 @@ import (
 
 const apiRoot = "http://api.diffbot.com/v2"
 
-func Article(url string) (a *types.Article, err error) {
-	return client.Article(url)
+func Article(key, url string) (a *types.Article, err error) {
+	c := Client{APIKey: key}
+	return c.Article(url)
 }

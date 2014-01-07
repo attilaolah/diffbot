@@ -9,6 +9,7 @@ const (
 	// Modified RFC1123 format
 	mRFC1123 = "Mon, 2 Jan 2006 15:04:05 MST"
 )
+
 type Time time.Time
 
 func (t Time) Time() time.Time {
