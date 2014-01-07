@@ -12,6 +12,9 @@ func (c *Categories) UnmarshalJSON(b []byte) (err error) {
 	if err = json.Unmarshal(b, &m); err != nil {
 		return
 	}
+	if len(m) == 0 {
+		return
+	}
 	var i int64
 	*c = make(Categories, len(m))
 	for k, v := range m {

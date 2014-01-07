@@ -35,5 +35,23 @@ var _ = Describe("Categories", func() {
 				}))
 			})
 		})
+		Context("A JSON null literal", func() {
+			It("should return nil", func() {
+				var c Categories
+				b := []byte("null")
+				err := json.Unmarshal(b, &c)
+				Expect(err).NotTo(HaveOccurred())
+				Expect(c).To(BeNil())
+			})
+		})
+		Context("Anything else", func() {
+			It("should return an error", func() {
+				var c Categories
+				b := []byte("[]")
+				err := json.Unmarshal(b, &c)
+				Expect(err).To(HaveOccurred())
+				Expect(c).To(BeNil())
+			})
+		})
 	})
 })
